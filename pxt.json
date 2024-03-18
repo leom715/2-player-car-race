@@ -6,7 +6,9 @@
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
         "pxt-countup": "github:shakao/pxt-countup#v0.0.2",
         "multiplayer": "*",
-        "arcade-split-screen": "github:riknoll/arcade-split-screen#v0.0.3"
+        "arcade-split-screen": "github:riknoll/arcade-split-screen#v0.0.3",
+        "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0",
+        "sprite-scaling": "*"
     },
     "files": [
         "main.blocks",
@@ -22,7 +24,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.47",
+        "target": "1.12.49",
         "targetId": "arcade"
     },
     "supportedTargets": [
