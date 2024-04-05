@@ -335,6 +335,7 @@ let p2: Sprite = null
 let p1: Sprite = null
 let maxspeed = 0
 let turn_speed = 0
+game.splash("")
 game.splash("off brand car game")
 game.splash("red car controls : ←→↑↓")
 game.splash("blue car controls : IJKL")
