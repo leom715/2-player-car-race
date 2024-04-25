@@ -7,99 +7,6 @@ scene.onHitWall(SpriteKind.Player, function (sprite, location) {
         speed2 = speed2 / 1.1
     }
 })
-function spawn_obstacles () {
-    list = [
-    img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . e . . 
-        . . . . . . . . . . . . e e . . 
-        . . . . . . . . . 5 5 e e e . . 
-        . . . . . . . . . 5 5 5 e . . . 
-        . . . . . . . . 5 5 5 5 5 . . . 
-        . . . . . . . . 5 5 5 5 5 . . 3 
-        . . . . . . 5 5 5 5 5 5 5 . . . 
-        e . . . 5 5 5 5 5 5 5 . . . . . 
-        . e 5 5 5 5 5 5 5 5 5 . . . . . 
-        . 5 5 5 5 5 5 5 5 . . . . . . . 
-        . . 5 5 5 5 . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `,
-    img`
-        . . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f f f . . . . . 
-        . . . f f f f f f f f f f f . . . 
-        . . f f f . . . 1 . . . f f f . . 
-        . . f f 1 . . . 1 . . . 1 f f . . 
-        . f f . . 1 . . 1 . . 1 . . f f . 
-        . f f . . . 1 . 1 . 1 . . . f f . 
-        . f f . . . . 1 . 1 . . . . f f . 
-        . f f 1 1 1 1 . 1 . 1 1 1 1 f f . 
-        . f f . . . . 1 . 1 . . . . f f . 
-        . f f . . . 1 . 1 . 1 . . . f f . 
-        . f f . . 1 . . 1 . . 1 . . f f . 
-        . . f f 1 . . . 1 . . . 1 f f . . 
-        . . f f f . . . 1 . . . f f f . . 
-        . . . f f f f f f f f f f f . . . 
-        . . . . . f f f f f f f . . . . . 
-        . . . . . . . . . . . . . . . . . 
-        `,
-    img`
-        ........................................
-        ........................................
-        .......................6............6...
-        ......................676..........676..
-        .....................6776e........6776..
-        ........bbccee......67776effffffe67776..
-        .......bdddbceeeeeeee6668ceeeccfff6768ee
-        ......bdbbbdbceeeeeeee668eeeeeeeeee668ec
-        .....bdbbdbbdceeeeeeee67776eeeeeeee67776
-        .....bdbdbdbdbceeeeeee6777eeeeeeeee6776e
-        ....bdbdbdbdbdceeeeeeee76eeeeeeeeeee76ee
-        ....bdbdbdbdbdceeeeeeee68eeeeeeeeeee78ee
-        ....bdbdbdbdbdceeeeeeee68eeeeeeeeeee78ee
-        ....bdbdbdbdbdfeeeeeeee76eeeeeeeeeee76ee
-        .....bdbdbdbdbfeeeeeee6777eeeeeeeee6777e
-        .....bdbbdbbdfeeeeeeee66776eeeeeeee66776
-        ......bdbbbdbfeeeeeec66eeeeeeeeeee66eeee
-        .......bdddbfeeeeecff778eeeeeeccff77eeee
-        ........bbcceeeccfc.67768........67768..
-        .....................6776.........6776..
-        ......................676..........676..
-        .......................6............6...
-        ........................................
-        ........................................
-        `,
-    img`
-        ........................
-        ........................
-        ........................
-        ........................
-        ..........ffff..........
-        ........ff1111ff........
-        .......fb111111bf.......
-        .......f11111111f.......
-        ......fd11111111df......
-        ......fd11111111df......
-        ......fddd1111dddf......
-        ......fbdbfddfbdbf......
-        ......fcdcf11fcdcf......
-        .......fb111111bf.......
-        ......fffcdb1bdffff.....
-        ....fc111cbfbfc111cf....
-        ....f1b1b1ffff1b1b1f....
-        ....fbfbffffffbfbfbf....
-        .........ffffff.........
-        ...........fff..........
-        ........................
-        ........................
-        ........................
-        ........................
-        `
-    ]
-}
 function start_lights (color: Image) {
     for (let index = 0; index <= 10; index++) {
         for (let index_2 = 0; index_2 <= 5; index_2++) {
@@ -171,8 +78,8 @@ function turningimageP1 (vx: number, vy: number) {
                 . . . e 2 e c b b b b c e 2 e . 
                 . . . e 2 e b b b b b b e 2 e . 
                 . . . e e e e e e e e e e e e . 
-                . . . f e d e e e e e e d e f . 
-                . . . f e 2 d e e e e d 2 e f . 
+                . . . f e e b e e e e b e e f . 
+                . . . f e b b e e e e b b e f . 
                 . . . f f e e e e e e e e f f . 
                 . . . . f f . . . . . . f f . . 
                 `)
@@ -277,8 +184,8 @@ function turningimageP2 (vx: number, vy: number) {
                 . . . 8 6 8 c b b b b c 8 6 8 . 
                 . . . 8 6 8 b b b b b b 8 6 8 . 
                 . . . 8 8 8 8 8 8 8 8 8 8 8 8 . 
-                . . . f 8 d 8 8 8 8 8 8 d 8 f . 
-                . . . f 8 6 d 8 8 8 8 d 6 8 f . 
+                . . . f 8 8 a 8 8 8 8 a 8 8 f . 
+                . . . f 8 a a 8 8 8 8 a a 8 f . 
                 . . . f f 8 8 8 8 8 8 8 8 f f . 
                 . . . . f f . . . . . . f f . . 
                 `)
@@ -324,22 +231,132 @@ function movep2 () {
     p2.vy = Math.sin(cardirectionp2) * speed2
     turningimageP2(p2.vx, p2.vy)
 }
+function SpawningEnemies (Difficulty: number) {
+    if (Difficulty == 1) {
+        for (let index = 0; index < 50; index++) {
+            EnemySprite = sprites.create(EnemyImages._pickRandom(), SpriteKind.Enemy)
+            tiles.placeOnTile(EnemySprite, SpawnLocation.removeAt(randint(0, SpawnLocation.length - 1)))
+        }
+    } else {
+        for (let index = 0; index < 200; index++) {
+            EnemySprite = sprites.create(EnemyImages._pickRandom(), SpriteKind.Enemy)
+            tiles.placeOnTile(EnemySprite, SpawnLocation.removeAt(randint(0, SpawnLocation.length - 1)))
+        }
+    }
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    if (sprite.image == mp.getPlayerSprite(mp.playerSelector(mp.PlayerNumber.One)).image) {
+        speed1 = speed1 / 2
+        p1.setVelocity(0, 0)
+        sprites.destroy(otherSprite, effects.bubbles, 200)
+    } else {
+        speed2 = speed2 / 2
+        p2.setVelocity(0, 0)
+        sprites.destroy(otherSprite, effects.bubbles, 200)
+    }
+})
+let EnemySprite: Sprite = null
 let accelerationp2 = 0
 let cardirectionp2 = 0
 let accelerationp1 = 0
 let cardirectionp1 = 0
-let list: Image[] = []
 let speed2 = 0
 let speed1 = 0
 let p2: Sprite = null
 let p1: Sprite = null
 let maxspeed = 0
 let turn_speed = 0
-game.splash("")
+let EnemyImages: Image[] = []
+let SpawnLocation: tiles.Location[] = []
 game.splash("off brand car game")
 game.splash("red car controls : ←→↑↓")
 game.splash("blue car controls : IJKL")
+let Difficulty = game.askForNumber("1 for easy or 2 for hard", 1)
 tiles.setCurrentTilemap(tilemap`map`)
+SpawnLocation = tiles.getTilesByType(assets.tile`myTile2`)
+EnemyImages = [
+img`
+    ........................
+    ........................
+    ........................
+    ........................
+    ..........ffff..........
+    ........ff1111ff........
+    .......fb111111bf.......
+    .......f11111111f.......
+    ......fd11111111df......
+    ......fd11111111df......
+    ......fddd1111dddf......
+    ......fbdbfddfbdbf......
+    ......fcdcf11fcdcf......
+    .......fb111111bf.......
+    ......fffcdb1bdffff.....
+    ....fc111cbfbfc111cf....
+    ....f1b1b1ffff1b1b1f....
+    ....fbfbffffffbfbfbf....
+    .........ffffff.........
+    ...........fff..........
+    ........................
+    ........................
+    ........................
+    ........................
+    `,
+img`
+    . . . . . c c c c c c c . . . . 
+    . . . . c 6 7 7 7 7 7 6 c . . . 
+    . . . c 7 c 6 6 6 6 c 7 6 c . . 
+    . . c 6 7 6 f 6 6 f 6 7 7 c . . 
+    . . c 7 7 7 7 7 7 7 7 7 7 c . . 
+    . . f 7 8 1 f f 1 6 7 7 7 f . . 
+    . . f 6 f 1 f f 1 f 7 7 7 f . . 
+    . . . f f 2 2 2 2 f 7 7 6 f . . 
+    . . c c f 2 2 2 2 7 7 6 f c . . 
+    . c 7 7 7 7 7 7 7 7 c c 7 7 c . 
+    c 7 1 1 1 7 7 7 7 f c 6 7 7 7 c 
+    f 1 1 1 1 1 7 6 f c c 6 6 6 c c 
+    f 1 1 1 1 1 1 6 6 c 6 6 6 c . . 
+    f 6 1 1 1 1 1 6 6 6 6 6 6 c . . 
+    . f 6 1 1 1 1 1 6 6 6 6 c . . . 
+    . . f f c c c c c c c c . . . . 
+    `,
+img`
+    . . . . . . . . . . . c c . . . 
+    . . . . . . . c c c c 6 3 c . . 
+    . . . . . . c 6 3 3 3 3 6 c . . 
+    . . c c . c 6 c c 3 3 3 3 3 c . 
+    . b 5 5 c 6 c 5 5 c 3 3 3 3 3 c 
+    . f f 5 c 6 c 5 f f 3 3 3 3 3 c 
+    . f f 5 c 6 c 5 f f 6 3 3 3 c c 
+    . b 5 5 3 c 3 5 5 c 6 6 6 6 c c 
+    . . b 5 5 3 5 5 c 3 3 3 3 3 3 c 
+    . c c 5 5 5 5 4 c c 3 3 3 3 3 c 
+    c 5 5 4 5 5 4 c 5 5 c 3 3 3 c . 
+    b 5 4 b 4 4 4 c 5 5 5 b c c . . 
+    c 4 5 5 b 4 4 c 5 5 5 c b b . . 
+    c 5 5 5 c 4 c 5 5 5 5 c c 5 b . 
+    c 5 5 5 5 c 4 c c c c c c 5 c . 
+    . c c c c c c . . . . . c c c . 
+    `,
+img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . b 5 5 b . . . 
+    . . . . . . b b b b b b . . . . 
+    . . . . . b b 5 5 5 5 5 b . . . 
+    . b b b b b 5 5 5 5 5 5 5 b . . 
+    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
+    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
+    . . b d 5 5 b 1 f f 5 4 4 c . . 
+    b b d b 5 5 5 d f b 4 4 4 4 b . 
+    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
+    c d d d c c b 5 5 5 5 5 5 5 b . 
+    c b d d d d d 5 5 5 5 5 5 5 b . 
+    . c d d d d d d 5 5 5 5 5 d b . 
+    . . c b d d d d d 5 5 5 b b . . 
+    . . . c c c c c c c c b b . . . 
+    `
+]
+SpawningEnemies(Difficulty)
 turn_speed = 0.1
 maxspeed = 200
 let start_lights2 = tiles.getTilesByType(assets.tile`myTile4`)
